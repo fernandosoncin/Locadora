@@ -32,20 +32,25 @@ public class PrincipalView extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Sistema de Locadora");
+        setPreferredSize(new java.awt.Dimension(1366, 768));
+
+        pnl.setPreferredSize(new java.awt.Dimension(1366, 768));
 
         javax.swing.GroupLayout pnlLayout = new javax.swing.GroupLayout(pnl);
         pnl.setLayout(pnlLayout);
         pnlLayout.setHorizontalGroup(
             pnlLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 906, Short.MAX_VALUE)
+            .addGap(0, 1413, Short.MAX_VALUE)
         );
         pnlLayout.setVerticalGroup(
             pnlLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 501, Short.MAX_VALUE)
+            .addGap(0, 1024, Short.MAX_VALUE)
         );
 
+        mnuCadastro.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/imagem/inserir.png"))); // NOI18N
         mnuCadastro.setText("Cadastro");
 
+        mniCadastroCliente.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/imagem/cliente.png"))); // NOI18N
         mniCadastroCliente.setText("Cliente");
         mniCadastroCliente.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -54,6 +59,7 @@ public class PrincipalView extends javax.swing.JFrame {
         });
         mnuCadastro.add(mniCadastroCliente);
 
+        mniCadastroFilme.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/imagem/dvd.png"))); // NOI18N
         mniCadastroFilme.setText("Filme");
         mniCadastroFilme.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -62,6 +68,7 @@ public class PrincipalView extends javax.swing.JFrame {
         });
         mnuCadastro.add(mniCadastroFilme);
 
+        mniLocacao.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/imagem/locacao.png"))); // NOI18N
         mniLocacao.setText("Locação");
         mniLocacao.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -72,8 +79,10 @@ public class PrincipalView extends javax.swing.JFrame {
 
         jMenuBar1.add(mnuCadastro);
 
+        mnuConsulta.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/imagem/pesquisar.png"))); // NOI18N
         mnuConsulta.setText("Consulta");
 
+        mniConsultaCliente.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/imagem/cliente.png"))); // NOI18N
         mniConsultaCliente.setText("Cliente");
         mniConsultaCliente.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -82,6 +91,7 @@ public class PrincipalView extends javax.swing.JFrame {
         });
         mnuConsulta.add(mniConsultaCliente);
 
+        mniConsultaFilme.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/imagem/dvd.png"))); // NOI18N
         mniConsultaFilme.setText("Filme");
         mniConsultaFilme.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -92,8 +102,10 @@ public class PrincipalView extends javax.swing.JFrame {
 
         jMenuBar1.add(mnuConsulta);
 
+        mnuSair.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/imagem/sair.png"))); // NOI18N
         mnuSair.setText("Sair");
 
+        mniSair.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/imagem/sair2.png"))); // NOI18N
         mniSair.setText("Sair");
         mniSair.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -110,11 +122,11 @@ public class PrincipalView extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(pnl, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(pnl, javax.swing.GroupLayout.DEFAULT_SIZE, 1413, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(pnl, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(pnl, javax.swing.GroupLayout.DEFAULT_SIZE, 1024, Short.MAX_VALUE)
         );
 
         pack();
