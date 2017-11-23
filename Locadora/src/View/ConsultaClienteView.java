@@ -33,18 +33,12 @@ public class ConsultaClienteView extends javax.swing.JInternalFrame {
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
-        jLabel8 = new javax.swing.JLabel();
-        jLabel9 = new javax.swing.JLabel();
         lblNome = new javax.swing.JLabel();
         lblRg = new javax.swing.JLabel();
         lblCpf = new javax.swing.JLabel();
-        lblTelefone = new javax.swing.JLabel();
-        lblCelular = new javax.swing.JLabel();
-        lblEndereco = new javax.swing.JLabel();
-        lblBairro = new javax.swing.JLabel();
-        lblCidade = new javax.swing.JLabel();
+        lblEmail = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        lblFilmes = new javax.swing.JLabel();
 
         setClosable(true);
         setTitle("Consulta de Clientes");
@@ -149,19 +143,7 @@ public class ConsultaClienteView extends javax.swing.JInternalFrame {
         jLabel4.setText("CPF:");
 
         jLabel5.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jLabel5.setText("Telefone:");
-
-        jLabel6.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jLabel6.setText("Celular:");
-
-        jLabel7.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jLabel7.setText("Endereço");
-
-        jLabel8.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jLabel8.setText("Bairro:");
-
-        jLabel9.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jLabel9.setText("Cidade:");
+        jLabel5.setText("Email:");
 
         lblNome.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         lblNome.setText("----");
@@ -172,20 +154,14 @@ public class ConsultaClienteView extends javax.swing.JInternalFrame {
         lblCpf.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         lblCpf.setText("----");
 
-        lblTelefone.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        lblTelefone.setText("----");
+        lblEmail.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        lblEmail.setText("----");
 
-        lblCelular.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        lblCelular.setText("----");
+        jLabel6.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel6.setText("Filmes:");
 
-        lblEndereco.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        lblEndereco.setText("----");
-
-        lblBairro.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        lblBairro.setText("----");
-
-        lblCidade.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        lblCidade.setText("----");
+        lblFilmes.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        lblFilmes.setText("----");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -207,28 +183,18 @@ public class ConsultaClienteView extends javax.swing.JInternalFrame {
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addComponent(jLabel5)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(lblTelefone))
+                                .addComponent(lblEmail)))
+                        .addContainerGap(303, Short.MAX_VALUE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addComponent(jLabel4)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(lblCpf))
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addComponent(jLabel6)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(lblCelular))
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(jLabel7)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(lblEndereco))
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(jLabel8)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(lblBairro))
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(jLabel9)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(lblCidade)))
-                        .addContainerGap(286, Short.MAX_VALUE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jLabel4)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(lblCpf)
+                                .addComponent(lblFilmes)))
                         .addGap(0, 0, Short.MAX_VALUE))))
         );
         jPanel1Layout.setVerticalGroup(
@@ -249,24 +215,12 @@ public class ConsultaClienteView extends javax.swing.JInternalFrame {
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel5)
-                    .addComponent(lblTelefone))
-                .addGap(18, 18, 18)
+                    .addComponent(lblEmail))
+                .addGap(19, 19, 19)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel6)
-                    .addComponent(lblCelular))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel7)
-                    .addComponent(lblEndereco))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel8)
-                    .addComponent(lblBairro))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel9)
-                    .addComponent(lblCidade))
-                .addContainerGap(22, Short.MAX_VALUE))
+                    .addComponent(lblFilmes)
+                    .addComponent(jLabel6))
+                .addContainerGap(90, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -286,14 +240,13 @@ public class ConsultaClienteView extends javax.swing.JInternalFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(pnlBuscaCliente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
-                .addContainerGap())
-            .addGroup(layout.createSequentialGroup()
-                .addGap(28, 28, 28)
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(16, Short.MAX_VALUE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(pnlBuscaCliente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)))
+                .addContainerGap(20, Short.MAX_VALUE))
         );
 
         pack();
@@ -326,19 +279,13 @@ public class ConsultaClienteView extends javax.swing.JInternalFrame {
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JLabel lblBairro;
-    private javax.swing.JLabel lblCelular;
-    private javax.swing.JLabel lblCidade;
     private javax.swing.JLabel lblCpf;
-    private javax.swing.JLabel lblEndereco;
+    private javax.swing.JLabel lblEmail;
+    private javax.swing.JLabel lblFilmes;
     private javax.swing.JLabel lblNome;
     private javax.swing.JLabel lblRg;
-    private javax.swing.JLabel lblTelefone;
     private javax.swing.JPanel pnlBuscaCliente;
     private javax.swing.JTable tblCliente;
     private javax.swing.JTextField txtCódigo;
