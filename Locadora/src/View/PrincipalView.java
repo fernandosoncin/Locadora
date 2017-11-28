@@ -18,7 +18,8 @@ public class PrincipalView extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        pnl = new javax.swing.JPanel();
+        jMenu1 = new javax.swing.JMenu();
+        pnlPrincipal = new javax.swing.JPanel();
         jMenuBar1 = new javax.swing.JMenuBar();
         mnuCadastro = new javax.swing.JMenu();
         mniCadastroCliente = new javax.swing.JMenuItem();
@@ -27,23 +28,25 @@ public class PrincipalView extends javax.swing.JFrame {
         mnuConsulta = new javax.swing.JMenu();
         mniConsultaCliente = new javax.swing.JMenuItem();
         mniConsultaFilme = new javax.swing.JMenuItem();
+        mnuReservas = new javax.swing.JMenu();
         mnuSair = new javax.swing.JMenu();
-        mniSair = new javax.swing.JMenuItem();
+
+        jMenu1.setText("jMenu1");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Sistema de Locadora");
         setPreferredSize(new java.awt.Dimension(1366, 768));
 
-        pnl.setPreferredSize(new java.awt.Dimension(1366, 768));
+        pnlPrincipal.setPreferredSize(new java.awt.Dimension(1366, 768));
 
-        javax.swing.GroupLayout pnlLayout = new javax.swing.GroupLayout(pnl);
-        pnl.setLayout(pnlLayout);
-        pnlLayout.setHorizontalGroup(
-            pnlLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        javax.swing.GroupLayout pnlPrincipalLayout = new javax.swing.GroupLayout(pnlPrincipal);
+        pnlPrincipal.setLayout(pnlPrincipalLayout);
+        pnlPrincipalLayout.setHorizontalGroup(
+            pnlPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 1413, Short.MAX_VALUE)
         );
-        pnlLayout.setVerticalGroup(
-            pnlLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        pnlPrincipalLayout.setVerticalGroup(
+            pnlPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 1024, Short.MAX_VALUE)
         );
 
@@ -102,18 +105,32 @@ public class PrincipalView extends javax.swing.JFrame {
 
         jMenuBar1.add(mnuConsulta);
 
-        mnuSair.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/imagem/sair.png"))); // NOI18N
-        mnuSair.setText("Sair");
-
-        mniSair.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/imagem/sair2.png"))); // NOI18N
-        mniSair.setText("Sair");
-        mniSair.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                mniSairActionPerformed(evt);
+        mnuReservas.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/imagem/if_Edit Alt_34574.png"))); // NOI18N
+        mnuReservas.setText("Reservas");
+        mnuReservas.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                mnuReservasMouseClicked(evt);
             }
         });
-        mnuSair.add(mniSair);
+        mnuReservas.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                mnuReservasActionPerformed(evt);
+            }
+        });
+        jMenuBar1.add(mnuReservas);
 
+        mnuSair.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/imagem/sair.png"))); // NOI18N
+        mnuSair.setText("Sair");
+        mnuSair.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                mnuSairMouseClicked(evt);
+            }
+        });
+        mnuSair.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                mnuSairActionPerformed(evt);
+            }
+        });
         jMenuBar1.add(mnuSair);
 
         setJMenuBar(jMenuBar1);
@@ -122,56 +139,70 @@ public class PrincipalView extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(pnl, javax.swing.GroupLayout.DEFAULT_SIZE, 1413, Short.MAX_VALUE)
+            .addComponent(pnlPrincipal, javax.swing.GroupLayout.DEFAULT_SIZE, 1413, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(pnl, javax.swing.GroupLayout.DEFAULT_SIZE, 1024, Short.MAX_VALUE)
+            .addComponent(pnlPrincipal, javax.swing.GroupLayout.DEFAULT_SIZE, 1024, Short.MAX_VALUE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void mniSairActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mniSairActionPerformed
-        System.exit(0);
-        
-    }//GEN-LAST:event_mniSairActionPerformed
-
     private void mniCadastroClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mniCadastroClienteActionPerformed
        CadastroClienteView ccv = new CadastroClienteView();
-       pnl.removeAll();
-       pnl.add(ccv);
-       pnl.updateUI();
+       pnlPrincipal.removeAll();
+       pnlPrincipal.add(ccv);
+       pnlPrincipal.updateUI();
         
     }//GEN-LAST:event_mniCadastroClienteActionPerformed
 
     private void mniCadastroFilmeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mniCadastroFilmeActionPerformed
        CadastroFilmeView cfv = new CadastroFilmeView();
-       pnl.removeAll();
-       pnl.add(cfv);
-       pnl.updateUI();
+       pnlPrincipal.removeAll();
+       pnlPrincipal.add(cfv);
+       pnlPrincipal.updateUI();
     }//GEN-LAST:event_mniCadastroFilmeActionPerformed
 
     private void mniLocacaoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mniLocacaoActionPerformed
        CadastroLocaçãoView clv = new CadastroLocaçãoView();
-       pnl.removeAll();
-       pnl.add(clv);
-       pnl.updateUI();
+       pnlPrincipal.removeAll();
+       pnlPrincipal.add(clv);
+       pnlPrincipal.updateUI();
     }//GEN-LAST:event_mniLocacaoActionPerformed
 
     private void mniConsultaClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mniConsultaClienteActionPerformed
        ConsultaClienteView cscv = new ConsultaClienteView();
-       pnl.removeAll();
-       pnl.add(cscv);
-       pnl.updateUI();
+       pnlPrincipal.removeAll();
+       pnlPrincipal.add(cscv);
+       pnlPrincipal.updateUI();
     }//GEN-LAST:event_mniConsultaClienteActionPerformed
 
     private void mniConsultaFilmeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mniConsultaFilmeActionPerformed
       ConsultaFilmeView csfv = new ConsultaFilmeView();
-       pnl.removeAll();
-       pnl.add(csfv);
-       pnl.updateUI();
+       pnlPrincipal.removeAll();
+       pnlPrincipal.add(csfv);
+       pnlPrincipal.updateUI();
     }//GEN-LAST:event_mniConsultaFilmeActionPerformed
+
+    private void mnuReservasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mnuReservasActionPerformed
+          
+    }//GEN-LAST:event_mnuReservasActionPerformed
+
+    private void mnuSairActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mnuSairActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_mnuSairActionPerformed
+
+    private void mnuReservasMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_mnuReservasMouseClicked
+     ReservasView resv = new ReservasView();
+       pnlPrincipal.removeAll();
+       pnlPrincipal.add(resv);
+       pnlPrincipal.updateUI();   
+    }//GEN-LAST:event_mnuReservasMouseClicked
+
+    private void mnuSairMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_mnuSairMouseClicked
+     System.exit(0);
+    }//GEN-LAST:event_mnuSairMouseClicked
 
 
     public static void main(String args[]) {
@@ -207,16 +238,17 @@ public class PrincipalView extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JMenu jMenu1;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenuItem mniCadastroCliente;
     private javax.swing.JMenuItem mniCadastroFilme;
     private javax.swing.JMenuItem mniConsultaCliente;
     private javax.swing.JMenuItem mniConsultaFilme;
     private javax.swing.JMenuItem mniLocacao;
-    private javax.swing.JMenuItem mniSair;
     private javax.swing.JMenu mnuCadastro;
     private javax.swing.JMenu mnuConsulta;
+    private javax.swing.JMenu mnuReservas;
     private javax.swing.JMenu mnuSair;
-    private javax.swing.JPanel pnl;
+    private javax.swing.JPanel pnlPrincipal;
     // End of variables declaration//GEN-END:variables
 }

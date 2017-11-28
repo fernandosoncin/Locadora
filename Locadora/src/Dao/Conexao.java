@@ -16,9 +16,9 @@ public class Conexao implements Serializable {
     
     public Conexao() throws SQLException{
             
-        usuario = "equipe2";
-        senha = "mSyHt7CTGaTbPOTh";
-        url = "34.226.248.240/phpmyadmin/";
+        usuario = "root";
+        senha = "root";
+        url = "jdbc:mysql://localhost:3306/equipe2";
         
         try{
             Class.forName("com.mysql.jdbc.Driver");
