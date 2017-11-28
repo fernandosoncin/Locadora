@@ -75,12 +75,13 @@ public class CadastroClienteView extends javax.swing.JInternalFrame {
             tblCadastroCliente.updateUI();
     }
     
-    /* public void atualizarTabelaFiltro() {
-        ClienteM cliente = new ClienteM();
+     public void AtualizaTabelaFiltro() {
+        
+         cliente = new ClienteM();
        
             String dados[][] = new String[listacliente.size()][5];
             int i = 0;
-            for (ClienteM listacliente : listacliente) {
+            for (ClienteM cliente : listacliente) {
                 
                 dados[i][0] = String.valueOf(cliente.getId());
                 dados[i][1] = cliente.getNome();
@@ -116,7 +117,7 @@ public class CadastroClienteView extends javax.swing.JInternalFrame {
              tblCadastroCliente.getColumnModel().getColumn(0).setCellRenderer(centralizado);
             tblCadastroCliente.setRowHeight(25);
             tblCadastroCliente.updateUI();
-    } */
+    } 
   
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
@@ -225,6 +226,11 @@ public class CadastroClienteView extends javax.swing.JInternalFrame {
         });
 
         btnLimpar.setText("Limpar");
+        btnLimpar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnLimparActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -369,7 +375,7 @@ public class CadastroClienteView extends javax.swing.JInternalFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(btnRemover, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(btnCancelar, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(btnCancelar, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -550,7 +556,7 @@ public class CadastroClienteView extends javax.swing.JInternalFrame {
                     
                 }else{
                     
-               AtualizaTabelaCliente();
+               AtualizaTabelaFiltro();
                 
                 }
             }catch(SQLException ex){
@@ -559,6 +565,12 @@ public class CadastroClienteView extends javax.swing.JInternalFrame {
             
         } 
     }//GEN-LAST:event_btnBuscarActionPerformed
+
+    private void btnLimparActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLimparActionPerformed
+     txtBuscarCliente.setText("");
+     AtualizaTabelaCliente();
+    txtBuscarCliente.requestFocusInWindow();
+    }//GEN-LAST:event_btnLimparActionPerformed
     
     public void limparCamposCliente(){
        txtId.setText("");

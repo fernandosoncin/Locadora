@@ -37,7 +37,7 @@
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="btnRemover" min="-2" pref="86" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="btnCancelar" min="-2" pref="84" max="-2" attributes="0"/>
+                      <Component id="btnCancelar" min="-2" pref="89" max="-2" attributes="0"/>
                   </Group>
               </Group>
               <EmptySpace max="32767" attributes="0"/>
@@ -297,6 +297,9 @@
           <Properties>
             <Property name="text" type="java.lang.String" value="Limpar"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnLimparActionPerformed"/>
+          </Events>
         </Component>
       </SubComponents>
     </Container>

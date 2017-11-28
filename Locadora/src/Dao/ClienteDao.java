@@ -134,4 +134,34 @@ public class ClienteDao {
     pst.close();
     return cliente;   
     }
+     
+    public List<ClienteM> buscaFiltroId (String Id) throws SQLException{
+     PreparedStatement pst;
+     String sql;
+     
+    List<ClienteM> cliente = new ArrayList<ClienteM>();
+    ClienteDao ClienteDAO = new ClienteDao();
+
+    String name = "%"+Id+"%";
+    
+    sql = "select * from cliente where id like ? order by id";
+    pst = Conexao.getInstance().prepareStatement(sql);
+        pst.setString(1, name);
+        ResultSet rs = pst.executeQuery();
+        while (rs.next()) {
+        cliente.add(new ClienteM(
+                rs.getInt("id"),
+                rs.getString("nome"), 
+                rs.getString("rg"), 
+                rs.getString("cpf"),
+                rs.getString("email"),
+                rs.getString("senha")));
+                
+        
+    }
+    pst.close();
+    return cliente;   
+    }
+     
+    
 }
