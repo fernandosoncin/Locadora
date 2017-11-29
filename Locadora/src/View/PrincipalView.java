@@ -2,6 +2,7 @@
 package View;
 
 import javax.swing.JFrame;
+import javax.swing.JOptionPane;
 
 
 public class PrincipalView extends javax.swing.JFrame {
@@ -151,36 +152,48 @@ public class PrincipalView extends javax.swing.JFrame {
 
     private void mniCadastroClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mniCadastroClienteActionPerformed
        CadastroClienteView ccv = new CadastroClienteView();
-       pnlPrincipal.removeAll();
        pnlPrincipal.add(ccv);
        pnlPrincipal.updateUI();
+       
+       /*int op = JOptionPane.showConfirmDialog(this,"Deseja realmente fechar?","Confirmação",JOptionPane.YES_NO_OPTION);
+       
+       if(op==0){
+           
+       }
+       
+       else{
+           
+       } */
+      
+       
         
     }//GEN-LAST:event_mniCadastroClienteActionPerformed
 
     private void mniCadastroFilmeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mniCadastroFilmeActionPerformed
        CadastroFilmeView cfv = new CadastroFilmeView();
-       pnlPrincipal.removeAll();
+             
+       
        pnlPrincipal.add(cfv);
        pnlPrincipal.updateUI();
     }//GEN-LAST:event_mniCadastroFilmeActionPerformed
 
     private void mniLocacaoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mniLocacaoActionPerformed
        CadastroLocaçãoView clv = new CadastroLocaçãoView();
-       pnlPrincipal.removeAll();
+         
        pnlPrincipal.add(clv);
        pnlPrincipal.updateUI();
     }//GEN-LAST:event_mniLocacaoActionPerformed
 
     private void mniConsultaClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mniConsultaClienteActionPerformed
        ConsultaClienteView cscv = new ConsultaClienteView();
-       pnlPrincipal.removeAll();
+      
        pnlPrincipal.add(cscv);
        pnlPrincipal.updateUI();
     }//GEN-LAST:event_mniConsultaClienteActionPerformed
 
     private void mniConsultaFilmeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mniConsultaFilmeActionPerformed
       ConsultaFilmeView csfv = new ConsultaFilmeView();
-       pnlPrincipal.removeAll();
+       
        pnlPrincipal.add(csfv);
        pnlPrincipal.updateUI();
     }//GEN-LAST:event_mniConsultaFilmeActionPerformed
@@ -195,7 +208,7 @@ public class PrincipalView extends javax.swing.JFrame {
 
     private void mnuReservasMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_mnuReservasMouseClicked
      ReservasView resv = new ReservasView();
-       pnlPrincipal.removeAll();
+       
        pnlPrincipal.add(resv);
        pnlPrincipal.updateUI();   
     }//GEN-LAST:event_mnuReservasMouseClicked
